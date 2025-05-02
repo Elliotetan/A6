@@ -1,0 +1,14 @@
+h1 {
+    color: white;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full viewport height */
+}
+
+h1 {
+    text-align: center;
+}

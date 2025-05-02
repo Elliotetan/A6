@@ -1,0 +1,201 @@
+/* Header, Footer, and General Layout */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.viewContainer {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.movieTitle {
+    font-family: "Limelight", serif;
+    font-weight: 2000;
+    font-size: 30px;
+    color: #FCEFF9;
+    /* margin-left: 20px; */
+}
+
+.infoHeader {
+    font-family: "Poiret One", sans-serif;
+    font-size: 22px;
+    color: #FCEFF9;
+    text-align: right;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds space between the items */
+}
+
+.aboutInfo {
+    font-size: 20px;
+}
+
+.infoHeader span {
+    white-space: nowrap; /* Prevents wrapping for each section */
+}
+
+.budgetRevenueContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds space between budget, revenue, and the website link */
+}
+
+.budgetRevenueContainer span {
+    margin: 0 10px; /* Adds space around the separator "-" */
+}
+
+.budgetRevenueContainer a {
+    color: #FCEFF9;
+    text-decoration: none;
+}
+
+.budgetRevenueContainer a:hover {
+    text-decoration: underline;
+}
+
+.smallDetail {
+    font-size: 18px;
+}
+
+/* Poster Section */
+.posterSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Stretch the children to have the same height */
+    width: 100%;
+    gap: 20px; /* Adds space between poster and overview box */
+}
+
+.posterSection img {
+    width: 300px;
+    height: 100%; /* Make the image stretch to match the height of the overview box */
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+/* Overview Box */
+.overviewBox {
+    flex-grow: 1; /* Allow the overview box to take up remaining space */
+    height: 100%; /* Ensure the overview box matches the height of the image */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px;
+    color: #FCEFF9;
+    font-family: "Poiret One", sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.overviewBox p {
+    margin-bottom: 20px;
+}
+
+.overviewBox a {
+    color: #F3E13F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.overviewBox a:hover {
+    text-decoration: underline;
+}
+
+.movieTitle, .infoHeader {
+    font-family: "Poiret One", sans-serif;
+    color: #FCEFF9;
+    text-align: left;
+}
+
+/* Media Query for Larger Screens (optional) */
+@media (min-width: 768px) {
+    .posterSection {
+        gap: 20px;
+    }
+
+    .posterSection img {
+        height: auto; /* Allow image to adjust based on the aspect ratio */
+    }
+
+    .overviewBox {
+        height: auto; /* Let the height of the overview box adjust to the content */
+    }
+}
+
+
+/* Trailer Section */
+.trailerText {
+    font-family: "Poiret One", sans-serif;
+    color: #FCEFF9;
+    font-size: 25px;
+    text-align: left; /* Align text to the left */
+    margin-left: 0; /* Remove any left margin */
+    margin-top: 0px; /* Add top margin for spacing */
+}
+
+.trailerView {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.trailerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+.trailerTile {
+    background-color: #2E2E38; 
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center; 
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trailerTile:hover {
+    background-color: #373743;
+    outline: solid 2px #F3E13F;
+    transform: scale(1.05);
+}
+
+.trailerThumbnail {
+    width: 100%; 
+    border-radius: 10px; 
+    object-fit: cover; 
+}
+
+/* Trailer Title */
+.trailerTile h4 {
+    font-size: 18px; 
+    font-family: "Old Standard TT", serif;
+    color: #FCEFF9; 
+    margin-top: 10px; 
+    text-align: center; 
+}
+
+.trailerTile a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* .trailerTile a:hover {
+    opacity: 0.8;
+} */
+

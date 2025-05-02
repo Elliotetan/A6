@@ -1,0 +1,162 @@
+/* Main Section Layout */
+.mainSection {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Genre Panel on the Left */
+.genrePanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 220px; /* Fixed width for sidebar */
+    min-width: 200px;
+    padding-right: 20px;
+}
+
+/* Pagination at the bottom of the left panel */
+.paginationContainer {
+    margin-top: auto;
+    color: #FCEFF9;
+    font-family: "Poiret One", sans-serif;
+    text-align: center;
+}
+
+.pageNumber {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.pageTurning {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pageTurning a {
+    color: #FCEFF9;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pageTurning a:hover {
+    color: #F3E13F;
+}
+
+/* Movie Display Section on the Right */
+.movieSection {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section Header */
+.movieDisplayText {
+    color: #FCEFF9;
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Movie Grid with 5 Movies per Row */
+.movieDisplay {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 movies per row */
+    gap: 20px;
+    padding: 0 20px 20px 0;
+    box-sizing: border-box;
+}
+
+/* Individual Movie Items */
+.movieDisplay li {
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: 3px solid transparent;
+    padding: 3px; /* Increased padding to give space between text and outline */
+}
+
+.movieDisplay li:hover {
+    transform: scale(1.05);
+    outline: 2px solid #F3E13F;
+    cursor: pointer;
+}
+
+/* Poster Image */
+.movies {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+/* Movie Title with More Space */
+.movieTitle {
+    margin-top: 8px;
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
+    font-size: 16px;
+    color: #FCEFF9;
+    background-color: transparent;
+}
+
+/* Remove link underline & color */
+.movieDisplay a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pageButton {
+    background-color: transparent;
+    font-family: "Poiret One", sans-serif;
+    color: #FCEFF9;
+    font-size: 18px; 
+    border: 1.5px solid #FCEFF9; 
+    padding: 4px 10px; /* Adjust padding for better button size */
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover state with yellow highlight */
+.pageButton:hover {
+    /* background-color: #F3E13F;  */
+    /* color: #1e1e2f; */
+    border-color: #F3E13F; 
+    cursor: pointer;
+}
+
+/* .pageButton:disabled {
+    background-color: #555555;
+    color: #999999;
+    border-color: #555555;
+    cursor: not-allowed;
+} */
+
+/* Responsive Movie Grid */
+@media (max-width: 1200px) {
+    .movieDisplay {
+        grid-template-columns: repeat(4, 1fr); /* 4 movies per row for medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .movieDisplay {
+        grid-template-columns: repeat(3, 1fr); /* 3 movies per row for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .movieDisplay {
+        grid-template-columns: repeat(2, 1fr); /* 2 movies per row for mobile */
+    }
+}

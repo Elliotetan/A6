@@ -1,0 +1,32 @@
+/* Genre Panel Container */
+.panelContainer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poiret One", sans-serif;
+}
+
+/* Genre Item Styling */
+.panelContainer li {
+    color: #FCEFF9; /* Light pinkish color for the text */
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    margin: 5px 0; /* Space between each genre item */
+}
+
+/* Hover Effect for Genre Items */
+.panelContainer li:hover {
+    background-color: #F3E13F; /* Yellow background on hover */
+    color: #1e1e2f; /* Dark color for the text when hovered */
+}
+
+/* Active Genre Item Styling */
+.panelContainer li.active {
+    background-color: #F3E13F; /* Active background */
+    color: #1e1e2f; /* Active text color */
+}

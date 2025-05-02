@@ -1,0 +1,120 @@
+/* Import Fonts */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* body {
+    background: linear-gradient(45deg, #1E1E24, #2A2A38);
+} */
+
+.top {
+    height: 17%;
+    width: 98%;
+    color: #FCEFF9;
+    padding-top: 0.5%;
+    padding-left: 2%;
+    padding-right: 0%;
+    padding-bottom: 0.5%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    /* 3 columns, middle one takes more space */
+    align-items: center;
+}
+
+.title {
+    color: #FCEFF9;
+    font-family: "Limelight", serif;
+    font-size: 36px;
+    /* Bigger font for the title */
+    text-align: left;
+    /* Align the title to the left */
+    justify-self: start;
+    /* Align the title to the left within the grid column */
+    grid-column: 1 / 2;
+    /* Moves the title to the left column */
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+    /* Center the options horizontally */
+    align-items: center;
+    /* Align items vertically */
+    list-style: none;
+    padding-right: 4%;
+    width: 100%;
+    /* Ensure the options take up full width */
+}
+
+.options li {
+    display: inline-block;
+    margin: 0 20px;
+    /* Adjust spacing between the options */
+    font-family: "Poiret One", sans-serif;
+    font-weight: 1000;
+    font-size: 20px;
+    /* Slightly smaller font for options */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.options li:hover {
+    color: #FDD017;
+    /* Change to gold on hover */
+}
+
+.options a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    /* Align the buttons to the right */
+    align-items: center;
+    /* Align the buttons vertically */
+    gap: 2%;
+    /* Space between the buttons */
+    grid-column: 3 / 4;
+    /* Place buttons in the third (right) column */
+}
+
+.loginButton,
+.registerButton {
+    background-color: #3E92CC;
+    color: #FCEFF9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px 20px;
+    border-radius: 25px;
+    /* Rounded corners */
+    border: none;
+    margin: 2%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.loginButton:hover,
+.registerButton:hover {
+    background-color: #1E90FF;
+    /* Darker blue on hover */
+    color: white;
+    transform: translateY(-2px);
+    /* Button lift effect */
+}
+.limelight-regular {
+    font-family: "Limelight", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* logo, menu, login*/

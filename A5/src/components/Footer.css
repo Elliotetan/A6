@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 1%;
+}
+
+.footer a {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer a:hover {
+    color: #f39c12;
+    transform: scale(1.2);
+}

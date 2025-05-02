@@ -1,0 +1,86 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1E1E24;
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.loginTitle {
+    font-size: 2.5rem;
+    /* 🛠 FIX: unit added */
+    font-family: "Limelight", serif;
+    margin-bottom: 20px;
+    color: #FCEFF9;
+}
+
+h2 {
+    font-family: "Poiret One", sans-serif;
+}
+
+/* Input form box */
+.loginInputContainer {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Text and password fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Submit button */
+.loginButton {
+    font-family: "Limelight", serif;
+    width: 100%;
+    padding: 12px;
+    background-color: #3E92CC;
+    color: #FCEFF9;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+    background-color: #2b6fa1;
+}
+
+/* Register link */
+.registerHyperlink {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.registerHyperlink a {
+    color: #0400fd;
+    text-decoration: none;
+}
+
+.registerHyperlink a:hover {
+    text-decoration: underline;
+}

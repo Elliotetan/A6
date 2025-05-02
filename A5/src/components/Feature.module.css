@@ -1,0 +1,66 @@
+.movieDisplayText {
+    color: #FCEFF9;
+    height: 10%;
+    width: 98.5%;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    font-family: "Poiret One", sans-serif;
+    font-style: bold;
+    font-weight: 2000;
+    font-size: 30px;
+}
+
+.movieDisplay {
+    width: 98%;
+    height: auto;
+    /* Resizable */
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.movieDisplay li {
+    list-style: none;
+    overflow: hidden;
+    /* Clips overflowing things */
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: 3px solid transparent;
+    padding: 3px;
+}
+
+.movieDisplay li:hover {
+    transform: scale(1.05);
+    outline: 2px solid #F3E13F;
+    cursor: pointer;
+    /* Changes cursor to cookie clicker grabby thing */
+}
+
+.movieDisplay img {
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+    object-fit: cover;
+    /*No stretching or squishing*/
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.movieTitle {
+    margin-top: 8px;
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
+    font-size: 16px;
+    color: #FCEFF9;
+    background-color: transparent;
+  }
+  
+  .movieDisplay a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
