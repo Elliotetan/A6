@@ -10,11 +10,11 @@ function Header() {
                 <h2 className="title">10//10 Films</h2>
             </div>
             <div className="menu">
-                <ul className="options">
+                {/* <ul className="options">
                     <li><a href="/movies/genre">Movies</a></li>
                     <li><a href="/movies/genre">TV Series</a></li>
                     <li><a href="/movies/genre">Most Popular</a></li>
-                </ul>
+                </ul> */}
 
                 {/*  https://developer.themoviedb.org/reference/movie-top-rated-list
                 Postman that sheet*/}

@@ -7,38 +7,84 @@
 
 .body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Changes layout to horizontal (side-by-side) */
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Creates space between the form and genre box */
     height: 100vh;
     background-color: #1E1E24;
     font-family: Arial, sans-serif;
+    padding: 0 20px; /* Padding for small screens */
+}
+
+/* Genre selection container */
+.genreSelectContainer {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px; /* Max width for genre selection box */
+    margin-left: 10%; /* Add left margin to move it off the wall */
+}
+
+.genreSelectContainer div {
+    margin-bottom: 3%;
+}
+
+.genreLabel,
+.checkbox {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
 }
 
 /* Title styling */
 .registerTitle {
     font-size: 2.5rem;
-    /* 🛠 FIX: unit added */
     font-family: "Limelight", serif;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Margin below title */
     color: #F3E13F;
+    text-align: center; /* Center the title */
+    width: 100%; /* Ensure the title takes full width of its container */
+}
+
+.genreh2 {
+    font-family: "Poiret One", sans-serif;
+    color: black;
+    font-weight: 2000;
+    font-size: 23px;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-family: "Poiret One", sans-serif;
+    color: #333;
 }
 
+/* Register box container to maintain max height */
+.registerBox {
+    max-height: 100%;
+    margin-right: 10%;
+}
+
+/* Register input container (form) styling */
 .registerInputContainer {
     background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: auto; /* Max width of the registration form */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form content */
+    justify-content: center;
 }
 
-/* Text and password fields */
+/* Input fields (text and password) styling */
 input[type="text"],
+input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -48,7 +94,7 @@ input[type="password"] {
     font-size: 1rem;
 }
 
-/* Submit button */
+/* Submit button styling */
 .registerButton {
     font-family: "Limelight", serif;
     width: 100%;
@@ -62,10 +108,12 @@ input[type="password"] {
     transition: background-color 0.3s ease;
 }
 
-.loginButton:hover {
+/* Hover effect for submit button */
+.registerButton:hover {
     background-color: #2b6fa1;
 }
 
+/* Login hyperlink styling */
 .loginHyperlink {
     margin-top: 15px;
     text-align: center;
@@ -81,4 +129,23 @@ input[type="password"] {
 
 .loginHyperlink a:hover {
     text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center;
+        padding: 20px; /* Add padding to prevent elements touching edges */
+    }
+
+    .genreSelectContainer {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        margin-top: 20px; /* Space between form and genre selection */
+        max-width: 100%;  /* Allow genre container to take full width */
+    }
+
+    .registerInputContainer {
+        max-width: 100%; /* Allow form to take full width */
+    }
 }
