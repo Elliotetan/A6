@@ -63,7 +63,7 @@ function GenreView() {
             <div className={styleGV.welcome}>Welcome {firstName}!</div>
             <div className={styleGV.mainSection}>
                 <div className={styleGV.genrePanel}>
-                    <GenrePanel genreList={genreList} genreClick={handleClick} />
+                    <GenrePanel className = {styleGV.genreList} genreList={genreList} genreClick={handleClick} />
                     <div className={styleGV.paginationContainer}>
                         <p className={styleGV.pageNumber}>Page {page}</p>
                         <div className={styleGV.pageTurning}>
@@ -81,7 +81,7 @@ function GenreView() {
                                     <div className={styleGV.movieTitle}>{movie.title}</div>
                                 </Link>
                                 <div className={styleGV['button-container']}>
-                                    <div onClick={() => cartAdd(movie)} className={styleGV.buybut}>
+                                    <div onClick={() => cartAdd(movie)} className={styleGV.buyButton}>
                                         {cart.has(movie.id) ? "Added" : "Buy"}
                                     </div>
                                 </div>

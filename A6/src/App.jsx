@@ -9,6 +9,8 @@ import ErrorView from './views/ErrorView';
 import MovieView from './views/MovieView';
 import GenreView from './views/GenreView';
 import DetailView from './views/DetailView';
+import SettingsView from './views/SettingsView';
+import CartView from './views/CartView';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/" element={<HomeView />} />
           <Route path="/login" element={<LoginView />} />
           <Route path="/register" element={<RegisterView />} />
+          <Route path="/settings" element={<SettingsView />} />
+          <Route path="/cart" element={<CartView />} />
           
           <Route path="/movies" element={<MovieView />}>
             <Route path="genre" element={<GenreView />} />

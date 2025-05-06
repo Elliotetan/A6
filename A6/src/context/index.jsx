@@ -9,25 +9,34 @@ export const StoreProvider = ({ children }) => {
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState('');
   const [cart, setCart] = useState(Map());
-  const [genres, setGenres] = useState(new Map());  
+  const [genres, setGenres] = useState(new Map());
+
+  const logout = () => {
+    setEmail("");
+    setFirstName("");
+    setLastName("");
+    setPassword("");
+    setCart(Map());
+    setGenres(new Map());
+  };
 
   const addGenre = (genre) => {
-    setGenres((prevGenres) => prevGenres.set(genre.id, genre.name));  
+    setGenres((prevGenres) => prevGenres.set(genre.id, genre.name));
   };
 
   const removeGenre = (genreId) => {
-    setGenres((prevGenres) => prevGenres.delete(genreId)); 
+    setGenres((prevGenres) => prevGenres.delete(genreId));
   };
 
   const addToCart = (movie) => {
-    setCart(prevCart => prevCart.set(movie.id, movie)); 
+    setCart(prevCart => prevCart.set(movie.id, movie));
   };
 
   return (
     <StoreContext.Provider value={{
       email, setEmail, cart, setCart,
       firstName, setFirstName, lastName, setLastName, password, setPassword,
-      addToCart, genres, setGenres, addGenre, removeGenre 
+      addToCart, genres, setGenres, addGenre, removeGenre, logout
     }}>
       {children}
     </StoreContext.Provider>

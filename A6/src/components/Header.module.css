@@ -82,6 +82,7 @@
     /* Place buttons in the third (right) column */
 }
 
+.logoutButton,
 .loginButton,
 .registerButton {
     background-color: #3E92CC;

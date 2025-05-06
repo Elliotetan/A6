@@ -1,32 +1,46 @@
-import './Header.css'
+import styleH from './Header.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useStoreContext } from '../context';
 
 function Header() {
-    const Navigate = useNavigate();
+  const navigate = useNavigate();
+  const { firstName, logout } = useStoreContext();
 
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
+
+  if (firstName !== "") {  // If the user is logged in, show logout button
     return (
-        <div className="top">
-            <div className="logo">
-                <h2 className="title">10//10 Films</h2>
-            </div>
-            <div className="menu">
-                {/* <ul className="options">
-                    <li><a href="/movies/genre">Movies</a></li>
-                    <li><a href="/movies/genre">TV Series</a></li>
-                    <li><a href="/movies/genre">Most Popular</a></li>
-                </ul> */}
-
-                {/*  https://developer.themoviedb.org/reference/movie-top-rated-list
-                Postman that sheet*/}
-                {/* https://api.themoviedb.org/3/movie/top_rated?api_key=import.meta.env.VITE_TMDB_KEY*/}
-                {/* https://api.themoviedb.org/3/movie/popular?api_key=import.meta.env.VITE_TMDB_KEY */}
-            </div>
-            <div className="login">
-                <button className="loginButton" onClick={() => Navigate('/login')}>Login</button>
-                <button className="registerButton" onClick={() => Navigate('/register')}>Register</button>
-            </div>
+      <div className={styleH.top}>
+        <div className={styleH.logo}>
+          <h2 className={styleH.title}>10//10 Films</h2>
         </div>
-    )
+        <div className={styleH.menu}>
+        </div>
+        <div className={styleH.login}>
+          <button className={styleH.loginButton} onClick={handleLogout}>Logout</button>
+          <button className={styleH.registerButton} onClick={() => navigate('/settings')}>Profile</button> 
+        </div>
+      </div>
+    );
+  } else {  // If the user is not logged in, show login/register buttons
+    return (
+      <div className={styleH.top}>
+        <div className={styleH.logo}>
+          <h2 className={styleH.title}>10//10 Films</h2>
+        </div>
+        <div className={styleH.menu}>
+          {/* Add any other menu items if needed */}
+        </div>
+        <div className={styleH.login}>
+          <button className={styleH.loginButton} onClick={() => navigate('/login')}>Login</button>
+          <button className={styleH.registerButton} onClick={() => navigate('/register')}>Register</button>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Header;
