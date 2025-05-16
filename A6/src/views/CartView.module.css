@@ -1,0 +1,126 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    background-color: #121212;
+    font-family: "Poiret One", sans-serif;
+    color: #FCEFF9;
+} */
+
+/* Page Header */
+.header {
+    font-size: 36px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* Cart Items Container */
+.cartItems {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    /* Spreads content to edges */
+    align-items: center;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartItem:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(243, 225, 63, 0.3);
+}
+
+/* Wrapper for link content (image + title) */
+.linkWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.linkWrapper:hover {
+    background-color: rgba(243, 225, 63, 0.1);
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+
+/* Movie Poster Styling */
+.poster {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Movie Title */
+.itemName {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #FCEFF9;
+    margin: 2%;
+}
+
+.info {
+    font-size: 20px;
+    /* margin-bottom: 10px; */
+    text-align: left;
+    color: #FCEFF9;
+    margin: 1%;
+}
+
+/* Remove Button */
+.removeButton {
+    width: fit-content;
+    background-color: transparent;
+    color: #FCEFF9;
+    font-family: "Poiret One", sans-serif;
+    font-size: 20px;
+    border: 1.5px solid #FCEFF9;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.removeButton:hover {
+    border-color: #1e1e2f;
+    background-color: #C52233;
+    font-weight: 1000;
+    transform: ease;
+}
+
+/* Optional: Subtotal Section */
+.subtotal {
+    width: 80%;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #FCEFF9;
+}

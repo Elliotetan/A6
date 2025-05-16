@@ -83,6 +83,8 @@
 }
 
 .logoutButton,
+.settingsButton,
+.cartButton,
 .loginButton,
 .registerButton {
     background-color: #3E92CC;
@@ -98,6 +100,8 @@
     transition: all 0.3s ease;
 }
 
+.settingsButton:hover,
+.logoutButton:hover,
 .loginButton:hover,
 .registerButton:hover {
     background-color: #1E90FF;
@@ -106,6 +110,26 @@
     transform: translateY(-2px);
     /* Button lift effect */
 }
+
+.cartButton {
+    background-color: #23A962;
+    color: #FCEFF9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    margin: 2%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cartButton:hover{
+    background-color: #1C7C54;
+    color: white;
+    transform: translateY(-2px);
+}
+
 .limelight-regular {
     font-family: "Limelight", serif;
     font-weight: 400;
