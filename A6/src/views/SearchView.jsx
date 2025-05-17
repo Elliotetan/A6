@@ -38,7 +38,7 @@ function SearchView() {
                             <img
                                 className={styleSearch.movies}
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                                alt={movie.title}
+                                alt={`Poster of ${movie.title}`}
                             />
                             <div className={styleSearch.movieTitle}>{movie.title}</div>
                         </Link>

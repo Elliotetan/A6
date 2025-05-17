@@ -56,7 +56,7 @@ function SearchBar() {
             .join("%20");
 
         if (cleaned.length > 0) {
-            navigate(`/movies/search:${cleaned}`);
+            navigate(`/movies/search/${cleaned}`);
         }
     };
 
