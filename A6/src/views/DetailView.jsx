@@ -8,11 +8,13 @@ import Footer from "../components/Footer";
 function DetailView() {
     const [movie, setMovie] = useState(null); // Initializing with null
     const { id } = useParams();
+    const apiKey = import.meta.env.VITE_TMDB_KEY;
+    const api = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&append_to_response=videos`;
 
     useEffect(() => {
         async function getMovie() {
             const response = await axios.get(
-                `https://api.themoviedb.org/3/movie/${id}?api_key=be3c7266366ad88b56a8397a0a3e668d&append_to_response=videos`
+                api
             );
             setMovie(response.data);
         }

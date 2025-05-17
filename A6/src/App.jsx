@@ -11,6 +11,7 @@ import GenreView from './views/GenreView';
 import DetailView from './views/DetailView';
 import SettingsView from './views/SettingsView';
 import CartView from './views/CartView';
+import SearchView from "./views/SearchView";
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
           <Route path="/register" element={<RegisterView />} />
           <Route path="/settings" element={<SettingsView />} />
           <Route path="/cart" element={<CartView />} />
-          
+
           <Route path="/movies" element={<MovieView />}>
             <Route path="genre" element={<GenreView />} />
             <Route path=":id" element={<DetailView />} />
+            <Route path="search/:id" element={<SearchView />} />
           </Route>
 
           <Route path="*" element={<ErrorView />} />
