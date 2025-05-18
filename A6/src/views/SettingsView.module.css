@@ -1,0 +1,151 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overall container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 40px;
+    background-color: #1E1E24;
+    font-family: Arial, sans-serif;
+    color: #FCEFF9;
+}
+
+label {
+    font-size: 22px;
+    font-weight: 1000;
+}
+
+input {
+    font-family: "Poiret One", sans-serif;
+    font-size: 22px;
+    font-weight: 1000;
+}
+
+input:focus {
+    outline: 2px solid #1E90FF; /* Light blue outline */
+}
+
+/* Welcome text */
+.welcomeInfo {
+    font-size: 2rem;
+    font-family: "Limelight", serif;
+    margin-bottom: 10px;
+}
+
+/* Email */
+.email {
+    font-size: 22.5px;
+    margin-bottom: 30px;
+    font-family: "Poiret One", sans-serif;
+    color: #FCEFF9;
+}
+
+/* Name input section */
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.nameChangeContainer {
+    margin-bottom: 20px;
+}
+
+.nameChangeContainer label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-family: "Poiret One", sans-serif;
+    color: #1E1E24;
+}
+
+.nameChangeContainer input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Genre selection section */
+.genresContainer {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    color: #1E1E24;
+}
+
+.genresContainer h3 {
+    font-family: "Poiret One", sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Genre checkboxes */
+.checkboxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkboxContainer div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 45%;
+}
+
+.checkboxContainer label {
+    font-size: 0.95rem;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+
+/* Save button */
+.saveButton {
+    font-family: "Limelight", serif;
+    padding: 12px 24px;
+    background-color: #3E92CC;
+    color: #FCEFF9;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.saveButton:hover {
+    background-color: #2b6fa1;
+}
+
+.genreLabel {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 1000;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+}

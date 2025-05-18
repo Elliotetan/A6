@@ -60,7 +60,7 @@ function GenreView() {
     return (
         <>
             <Header />
-            <div className={styleGV.welcome}>Welcome {firstName}!</div>
+            <div className={styleGV.welcome}>Welcome {firstName}</div>
             <div className={styleGV.mainSection}>
                 <div className={styleGV.genrePanel}>
                     <GenrePanel className = {styleGV.genreList} genreList={genreList} genreClick={handleClick} />

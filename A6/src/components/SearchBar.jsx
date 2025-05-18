@@ -40,6 +40,11 @@ function SearchBar() {
             clearTimeout(debounceRef.current);
         }
 
+        if (value.trim() === "") {
+            movieSetter([]); // Clear results if input is empty
+            return;
+        }
+
         debounceRef.current = setTimeout(() => {
             handleSearch(value);
         }, 400);
@@ -59,6 +64,9 @@ function SearchBar() {
             navigate(`/movies/search/${cleaned}`);
         }
     };
+
+    // #44633F;
+    // #DECEB4;
 
     return (
         <div className={styleSB.hero}>

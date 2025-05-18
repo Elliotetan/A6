@@ -24,7 +24,7 @@ function Header() {
         </div>
         <div className={styleH.login}>
           <button className={styleH.logoutButton} onClick={handleLogout}>Logout</button>
-          <button className={styleH.settingsButton} onClick={() => navigate('/settings')}>Profile</button>
+          <button className={styleH.settingsButton} onClick={() => navigate('/settings')}>Settings</button>
           <button className={styleH.cartButton} onClick={() => navigate('/cart')}>Cart</button>
         </div>
       </div>

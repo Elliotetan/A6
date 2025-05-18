@@ -5,9 +5,6 @@
     padding: 0px;
 }
 
-/* body {
-    background: linear-gradient(45deg, #1E1E24, #2A2A38);
-} */
 
 .top {
     height: 17%;
@@ -23,46 +20,40 @@
     align-items: center;
 }
 
+.logo{
+    justify-content: start;
+}
+
 .title {
     color: #FCEFF9;
     font-family: "Limelight", serif;
     font-size: 36px;
-    /* Bigger font for the title */
     text-align: left;
-    /* Align the title to the left */
     justify-self: start;
-    /* Align the title to the left within the grid column */
     grid-column: 1 / 2;
-    /* Moves the title to the left column */
 }
 
 .options {
     display: flex;
     justify-content: space-evenly;
-    /* Center the options horizontally */
     align-items: center;
-    /* Align items vertically */
     list-style: none;
     padding-right: 4%;
     width: 100%;
-    /* Ensure the options take up full width */
 }
 
 .options li {
     display: inline-block;
     margin: 0 20px;
-    /* Adjust spacing between the options */
     font-family: "Poiret One", sans-serif;
     font-weight: 1000;
     font-size: 20px;
-    /* Slightly smaller font for options */
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .options li:hover {
     color: #FDD017;
-    /* Change to gold on hover */
 }
 
 .options a {
@@ -73,13 +64,9 @@
 .buttons-container {
     display: flex;
     justify-content: flex-end;
-    /* Align the buttons to the right */
     align-items: center;
-    /* Align the buttons vertically */
     gap: 2%;
-    /* Space between the buttons */
     grid-column: 3 / 4;
-    /* Place buttons in the third (right) column */
 }
 
 .logoutButton,
@@ -90,16 +77,17 @@
     background-color: #3E92CC;
     color: #FCEFF9;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 10px 20px;
+    padding: 9px 18px;
     border-radius: 25px;
     /* Rounded corners */
     border: none;
-    margin: 2%;
-    font-size: 16px;
+    margin: 1%;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+.cartButton:hover,
 .settingsButton:hover,
 .logoutButton:hover,
 .loginButton:hover,
@@ -113,21 +101,18 @@
 
 .cartButton {
     background-color: #23A962;
-    color: #FCEFF9;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 10px 20px;
-    border-radius: 25px;
-    border: none;
-    margin: 2%;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .cartButton:hover{
     background-color: #1C7C54;
-    color: white;
-    transform: translateY(-2px);
+}
+
+.settingsButton{
+    background-color: #707070;
+}
+
+.settingsButton:hover{
+    background-color: #525252;
 }
 
 .limelight-regular {
@@ -141,5 +126,3 @@
     font-weight: 400;
     font-style: normal;
 }
-
-/* logo, menu, login*/
