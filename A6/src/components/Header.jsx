@@ -36,8 +36,6 @@ function Header() {
           <h2 className={styleH.title}>10//10 Films</h2>
         </div>
         <div className={styleH.menu}>
-          {/* <div><SearchBar /></div> */}
-          {/* Add stuff? */}
         </div>
         <div className={styleH.login}>
           <button className={styleH.loginButton} onClick={() => navigate('/login')}>Login</button>

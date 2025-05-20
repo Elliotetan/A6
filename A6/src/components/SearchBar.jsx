@@ -8,6 +8,7 @@ function SearchBar() {
     const navigate = useNavigate();
     const apiKey = import.meta.env.VITE_TMDB_KEY;
     const debounceRef = useRef();
+    // let buttonEnter = document.querySelector("button");
 
     // Define a stable version of the debounced function
     const handleSearch = useCallback(async (searchQuery) => {
@@ -65,6 +66,20 @@ function SearchBar() {
         }
     };
 
+    const handleKeyDown = (e) => {
+        e.preventDefault();
+        const cleaned = query
+            .replace(/[^a-zA-Z0-9 ]/g, "")
+            .trim()
+            .split(" ")
+            .filter(word => word.length > 0)
+            .join("%20");
+
+        if (cleaned.length > 0) {
+            navigate(`/movies/search/${cleaned}`);
+        }
+    }
+
     // #44633F;
     // #DECEB4;
 
@@ -76,6 +91,11 @@ function SearchBar() {
                         type="text"
                         placeholder="Search Films. . ."
                         onInput={handleInput}
+                        onKeyDown={(e) => {
+                            if (e.key == "Enter" && query.trim()){
+                                navigate(`/movies/${movie.id}`);
+                            }
+                        }}
                         required
                     />
                     <button className={styleSB.searchButton} type='submit'>Search</button>
