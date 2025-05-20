@@ -159,6 +159,7 @@
 
 .button-container {
     display: flex;
+    /* font-family: "Poiret One", sans-serif; */
     justify-content: center;
     align-items: center;
     margin-top: 10px;
@@ -176,6 +177,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-align: center;
+    /* font-family: "Poiret One", sans-serif; */
     font-family: "Josefin Sans", sans-serif;
 }
 

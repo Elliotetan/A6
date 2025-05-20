@@ -81,7 +81,7 @@ function GenreView() {
                                     <div className={styleGV.movieTitle}>{movie.title}</div>
                                 </Link>
                                 <div className={styleGV['button-container']}>
-                                    <div onClick={() => cartAdd(movie)} className={styleGV.buyButton}>
+                                    <div onClick={() => cartAdd(movie)} className={styleGV.buyButton}  style={cart.has(movie.id) ? { pointerEvents: 'none', opacity: 0.75, backgroundColor: '#26BA6B' } : {}}>
                                         {cart.has(movie.id) ? "Added" : "Buy"}
                                     </div>
                                 </div>

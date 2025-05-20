@@ -46,6 +46,7 @@ function SearchView() {
                             <div
                                 onClick={() => addToCart(movie)}
                                 className={styleSearch.buyButton}
+                                style={cart.has(movie.id) ? { pointerEvents: 'none', opacity: 0.75, backgroundColor: '#26BA6B' } : {}}
                             >
                                 {cart.has(movie.id) ? "Added" : "Buy"}
                             </div>
